@@ -77,7 +77,7 @@ p5.RendererGL.prototype.endShape = function(
   return this;
 };
 
-p5.prototype.endShape = function(mode, count) {
+p5.prototype.endShape = function(mode, count = 1) {
   //p5._validateParameters('endShape', arguments);
   if (this._renderer.isP3D) {
     this._renderer.endShape(
