@@ -1,4 +1,4 @@
-p5.RendererGL.prototype._drawImmediateFill = function(count) {
+p5.RendererGL.prototype._drawImmediateFill = function(count = 1) {
   const gl = this.GL;
   this._useVertexColor = (this.immediateMode.geometry.vertexColors.length > 0);
   const shader = this._getImmediateFillShader();
@@ -45,7 +45,7 @@ p5.RendererGL.prototype.endShape = function(
   isQuadratic,
   isContour,
   shapeKind,
-  count
+  count = 1
 ) {
   if (this.immediateMode.shapeMode === POINTS) {
     this._drawPoints(
